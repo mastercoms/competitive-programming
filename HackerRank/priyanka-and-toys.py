@@ -4,12 +4,9 @@ if __name__ == '__main__':
     weights.sort()
     purchases = count
     comparator = -1
-    i = 0
-    while i < count:
-        if weights[i] > comparator:
-            comparator = weights[i] + 4
+    for weight in weights:
+        if weight > comparator:
+            comparator = weight + 4
         else:
             purchases -= 1
-        i += 1
     print(purchases)
-
